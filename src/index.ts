@@ -68,5 +68,69 @@ function processValue(value: string | number): number {
     return value.length;
   } else return value * 2;
 }
-// console.log(processValue("hello")); 
-// console.log(processValue(10)); 
+// console.log(processValue("hello"));
+// console.log(processValue(10));
+
+//Problem: 6
+interface Product {
+  name: string;
+  price: number;
+}
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length === 0) {
+    return null;
+  }
+  let mostExpensiveProduct = products[0];
+  for (let i = 1; i < products.length; i++) {
+    if (products[i].price > mostExpensiveProduct.price) {
+      mostExpensiveProduct = products[i];
+    }
+  }
+  return mostExpensiveProduct;
+}
+const products = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 },
+];
+
+// console.log(getMostExpensiveProduct(products));
+
+//Problem: 7
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+function getDayType(day: Day): string {
+  if (
+    day === Day.Monday ||
+    day === Day.Tuesday ||
+    day === Day.Wednesday ||
+    day === Day.Thursday ||
+    day === Day.Friday
+  ) {
+    return "Weekday";
+  } else return "Weekend";
+}
+// console.log(getDayType(Day.Sunday));
+
+//Problem:8
+async function squareAsync(n: number): Promise<number> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (n < 0) {
+        reject(new Error("Negative)"));
+      } else {
+        resolve(n * n);
+      }
+    }, 1000);
+  });
+}
+
+// squareAsync(0).then(console.log);
+// squareAsync(-3).catch(console.error);    

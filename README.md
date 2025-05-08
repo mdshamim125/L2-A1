@@ -1,4 +1,4 @@
-**two impactful TypeScript topics**:
+## two impactful TypeScript topics:
 
 1. **Difference between `interface` and `type` in TypeScript**
 2. **Difference between `any`, `unknown`, and `never` in TypeScript**

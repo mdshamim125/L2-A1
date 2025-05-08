@@ -5,7 +5,6 @@
 
 ---
 
-# 📘 TypeScript Concepts Explained
 
 ## ✨ Topic 1: Differences Between `interface` and `type` in TypeScript
 
@@ -124,8 +123,3 @@ function throwError(message: string): never {
 
 ---
 
-## ✅ Final Words
-
-Understanding and using TypeScript’s advanced types correctly improves **code safety, readability, and maintainability**. Interfaces, types, and specific type keywords (`any`, `unknown`, `never`) are powerful tools when used thoughtfully.
-
----

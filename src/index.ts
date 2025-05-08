@@ -1,5 +1,3 @@
-// console.log("Hello World");
-
 //Problem: 1
 function formatString(input: string, toUpper?: boolean): string {
   if (toUpper === false) {
@@ -7,9 +5,6 @@ function formatString(input: string, toUpper?: boolean): string {
   }
   return input.toUpperCase();
 }
-// console.log(formatString("Hello"));
-// console.log(formatString("Hello", true));
-// console.log(formatString("Hello", false));
 
 //Problem: 2
 function filterByRating(
@@ -18,23 +13,12 @@ function filterByRating(
   return items.filter((item) => item.rating >= 4);
 }
 
-const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 5.0 },
-  { title: "Book D", rating: 2.8 },
-  { title: "Book E", rating: 4.0 },
-];
-// console.log(filterByRating(books));
-
 // Problem: 3
 function concatenateArrays<T>(...arrays: T[][]): T[] {
   const result: T[] = [];
   arrays.map((item) => result.push(...item));
   return result;
 }
-// console.log(concatenateArrays([1, 2], [3, 4], [5]));
-// console.log(concatenateArrays(["a", "b"], ["c"]));
 
 // Problem: 4
 class Vehicle {
@@ -45,7 +29,7 @@ class Vehicle {
     this.year = year;
   }
   getInfo(): string {
-    return `"Make: ${this.make}, Year: ${this.year}"`;
+    return `Make: ${this.make}, Year: ${this.year}`;
   }
 }
 class Car extends Vehicle {
@@ -55,12 +39,9 @@ class Car extends Vehicle {
     this.model = model;
   }
   getModel(): string {
-    return `"Model: ${this.model}"`;
+    return `Model: ${this.model}`;
   }
 }
-// const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getInfo());
-// console.log(myCar.getModel());
 
 //Problem: 5
 function processValue(value: string | number): number {
@@ -68,8 +49,6 @@ function processValue(value: string | number): number {
     return value.length;
   } else return value * 2;
 }
-// console.log(processValue("hello"));
-// console.log(processValue(10));
 
 //Problem: 6
 interface Product {
@@ -88,13 +67,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
   }
   return mostExpensiveProduct;
 }
-const products = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-];
-
-// console.log(getMostExpensiveProduct(products));
 
 //Problem: 7
 enum Day {
@@ -117,14 +89,13 @@ function getDayType(day: Day): string {
     return "Weekday";
   } else return "Weekend";
 }
-// console.log(getDayType(Day.Sunday));
 
 //Problem:8
 async function squareAsync(n: number): Promise<number> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (n < 0) {
-        reject(new Error("Negative)"));
+        reject(new Error("Negative number not allowed)"));
       } else {
         resolve(n * n);
       }
@@ -132,5 +103,4 @@ async function squareAsync(n: number): Promise<number> {
   });
 }
 
-// squareAsync(0).then(console.log);
-// squareAsync(-3).catch(console.error);    
+
